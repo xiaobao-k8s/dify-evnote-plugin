@@ -1,0 +1,6 @@
+dify_plugin>=0.2.0,<0.3.0
+oauth2>=1.9.0.post1
+oauthlib>=1.0.3
+requests>=2.8.1
+requests-oauthlib>=0.5.0
+# evernote库已包含在项目中，路径为tools/lib，无需通过pip安装

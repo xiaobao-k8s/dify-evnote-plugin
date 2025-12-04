@@ -1,0 +1,16 @@
+identity:
+  name: listNotebooks
+  author: xiaobao
+  label:
+    en_US: listNotebooks
+    zh_Hans: 获取笔记本列表
+    pt_BR: listNotebooks
+description:
+  human:
+    en_US: listNotebooks
+    zh_Hans: 获取印象笔记笔记本列表
+    pt_BR: listNotebooks
+  llm: get evernote's listNotebooks
+extra:
+  python:
+    source: tools/listNotebooks.py

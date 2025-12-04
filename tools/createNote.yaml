@@ -1,0 +1,56 @@
+identity:
+  name: createNote
+  author: xiaobao
+  label:
+    en_US: createNote
+    zh_Hans: 创建笔记
+    pt_BR: createNote
+description:
+  human:
+    en_US: createNote
+    zh_Hans: 在默认笔记本，创建笔记
+    pt_BR: createNote
+  llm: Create notes in Evernote
+parameters:
+  - name: title
+    type: string
+    required: true
+    label:
+      en_US: title
+      zh_Hans: 笔记标题
+      pt_BR: title
+    human_description:
+      en_US: title
+      zh_Hans: 笔记标题
+      pt_BR: title
+    llm_description: title
+    form: llm
+  - name: content
+    type: string
+    required: true
+    label:
+      en_US: content
+      zh_Hans: 笔记内容
+      pt_BR: content
+    human_description:
+      en_US: content
+      zh_Hans: 笔记内容
+      pt_BR: content
+    llm_description: content
+    form: llm
+  - name: book_name
+    type: string
+    required: false
+    label:
+      en_US: note book name
+      zh_Hans: 笔记本名称
+      pt_BR: note book name
+    human_description:
+      en_US: note book name
+      zh_Hans: 指定笔记创建在哪个笔记本下
+      pt_BR: note book name
+    llm_description: Specify which notebook the note is created in
+    form: llm
+extra:
+  python:
+    source: tools/createNote.py

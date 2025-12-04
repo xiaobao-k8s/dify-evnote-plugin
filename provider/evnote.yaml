@@ -1,0 +1,43 @@
+identity:
+  author: xiaobao
+  name: evnote
+  label:
+    en_US: evnote
+    zh_Hans: 印象笔记管理插件
+    pt_BR: evnote
+  description:
+    en_US: evernote mgr
+    zh_Hans: 印象笔记管理，包括展示笔记本列表、创建笔记
+    pt_BR: evernote mgr
+  icon: icon.svg
+tools:
+  - tools/listNotebooks.yaml
+  - tools/createNote.yaml
+extra:
+  python:
+    source: provider/evnote.py
+
+credentials_for_provider:
+  auth_token:
+    type: secret-input
+    required: true
+    label:
+      en_US: auth token
+      zh_Hans: 认证token
+      pt_BR: auth token
+  sandbox:
+    type: boolean
+    required: false
+    default: true
+    label:
+      en_US: sandbox
+      zh_Hans: 沙盒模式,默认使用沙盒模式，测试没问题后开启生产模式
+      pt_BR: sandbox
+  china:
+    type: boolean
+    required: false
+    default: true
+    label:
+      en_US: china
+      zh_Hans: 默认使用国内网站（app.yinxiang.com），设置False则使用www.evernote.com
+      pt_BR: china
