@@ -98,5 +98,54 @@ This plugin includes the following tools:
 - Support for creating notes functionality
 - Support for sandbox mode and region settings
 
+## Development Guide
+
+### Installation
+
+To set up the plugin for local development:
+
+```bash
+# Install dependencies
+pip install -r requirements.txt
+```
+### Remote Debugging
+
+To debug the plugin remotely with Dify:
+
+1. **Get Debugging Credentials**
+   - Go to the "Plugin Management" page in Dify
+   - Retrieve the remote server address and debug key
+
+2. **Configure Environment Variables**
+   - Copy `.env.example` to create a new `.env` file:
+     ```bash
+     cp .env.example .env
+     ```
+   - Edit `.env` and fill in the debugging credentials:
+     ```
+     INSTALL_METHOD=remote
+     REMOTE_INSTALL_URL=debug.dify.ai:5003
+     REMOTE_INSTALL_KEY=********-****-****-****-************
+     ```
+
+3. **Start Debug Server**
+   - Run the plugin with the debug configuration:
+     ```bash
+     python -m main
+     ```
+
+4. **Access the Plugin**
+   - The plugin will be installed to your Dify workspace automatically
+   - Team members can also access the plugin for collaborative testing
+
+### Plugin Packaging
+
+To package the plugin for deployment:
+
+```bash
+# Package the plugin
+dify plugin package ./evnote2  
+```
+
 
 
