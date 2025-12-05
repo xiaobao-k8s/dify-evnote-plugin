@@ -30,14 +30,10 @@ credentials_for_provider:
     required: false
     default: true
     label:
-      en_US: sandbox
+      en_US: Sandbox mode, enabled by default for testing; switch to production after verification
       zh_Hans: 沙盒模式,默认使用沙盒模式，测试没问题后开启生产模式
       pt_BR: sandbox
-  china:
-    type: boolean
-    required: false
-    default: true
-    label:
-      en_US: china
-      zh_Hans: 默认使用国内网站（app.yinxiang.com），设置False则使用www.evernote.com
-      pt_BR: china
+    help:
+      en_US: Create an API token from your Evernote account settings，current only support china site.
+      zh_Hans: 从您的 Evernote 帐户设置创建 API 令牌，当前仅支持国内网站。
+    url: https://dev.yinxiang.com/doc/articles/dev_tokens.php

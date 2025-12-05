@@ -14,7 +14,7 @@ class createNote(Tool):
         super().__init__(runtime, session)
         auth_token = runtime.credentials["auth_token"]
         sandbox = runtime.credentials["sandbox"]
-        china = runtime.credentials["china"]
+        china = True  # 固定使用国内网站(app.yinxiang.com)
         self.evernoteManager = EvernoteManager(auth_token, sandbox, china)
     def _invoke(self, tool_parameters: dict[str, Any]) -> Generator[ToolInvokeMessage]:
         """

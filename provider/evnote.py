@@ -20,7 +20,7 @@ class EvnoteProvider(ToolProvider):
 
             auth_token = credentials["auth_token"]
             sandbox = credentials["sandbox"]
-            china = credentials["china"]
+            china = True  # 固定使用国内网站(app.yinxiang.com)
 
             evernote_manager = EvernoteManager(auth_token, sandbox, china)
             
