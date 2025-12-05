@@ -30,8 +30,8 @@ credentials_for_provider:
     required: false
     default: true
     label:
-      en_US: Sandbox mode, enabled by default for testing; switch to production after verification
-      zh_Hans: 沙盒模式,默认使用沙盒模式，测试没问题后开启生产模式
+      en_US: Sandbox mode:Use sandbox mode by default (set to true). Enable production mode (set to false) after successful testing.
+      zh_Hans: 沙盒模式,默认（设为true)使用沙盒模式，测试没问题后开启生产模式(设为false)
       pt_BR: sandbox
     help:
       en_US: Create an API token from your Evernote account settings，current only support china site.

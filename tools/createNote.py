@@ -26,7 +26,7 @@ class createNote(Tool):
         # 从传入的参数中提取笔记标题
         title = tool_parameters["title"]
         content = tool_parameters["content"]
-        book_name = tool_parameters["book_name"]
+        book_name = tool_parameters.get("book_name")  # 使用get()方法避免KeyError，当参数不存在时返回None
         try:
             createNote = self.evernoteManager.createNote(title, content, book_name)
         except Exception as e:
